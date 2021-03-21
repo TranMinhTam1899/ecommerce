@@ -1,0 +1,172 @@
+.header{
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid $color-white-0;
+    background: $color-white-0;
+}
+
+
+// Navigation
+.Navigation__content{
+    .navbar-nav{
+        margin: 0 auto;
+        .nav-item {
+            margin: 0 20px;
+            .nav-link{
+                @include text-style($color-black-0, $fs-2 + 1, $fw-bold-0);
+                padding: 5px 0;
+                position: relative;
+                &::before{
+                    content: "";
+                    height: 1.5px;
+                    width: 0;
+                    background-color: $color-brown-0;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all .5s;
+                }
+                &::after{
+                    content: "";
+                    height: 1.5px;
+                    width: 0;
+                    background-color: $color-brown-0;
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transition: all .5s;
+                }
+                &:hover::before, &:hover::after{
+                    width: 20px;
+                }
+                
+            }
+        }
+    }
+}
+
+
+// user top right
+.top__right__header{
+    ul.top_right{
+        padding: 0;
+        margin: 0;
+        line-height: 50px;
+        float: right;
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                margin: 0 15px;
+                position: relative;
+                @include text-style($color-brown-3, $fs-3 + 2, $fw-normal);
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            a.avatar{
+                img {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 3px solid $color-brown-3;
+                } 
+            }
+
+        }
+        .cart__number__bg {
+            height: 20px;
+            background: #ab7a5f;
+            position: absolute;
+            width: 20px;
+            border-radius: 50%;
+            top: 6px;
+            right: 18px;
+            .cart__number {
+                position: absolute;
+                top: -15px;
+                right: 6px;
+                @include text-style($color-white-0, $fs-1, $fw-normal);
+            }
+        }
+        .btnTogoleLogin {
+            background: transparent;
+            padding: 0;
+            border: none;
+            background: $color-white-0;
+            &:focus {
+                border-radius: 0;
+                box-shadow: none;
+                background: $color-white-0;
+            }
+        }
+    }
+}
+
+
+.user{
+    #userDropDownContent {
+        padding: 0;
+        button{
+            padding: 0;
+            a{
+                font-size: 14px;
+                @include text-style($color-brown-0,$fs-1 + 2,$fw-bold-2);
+                text-decoration: none;
+            }
+        
+            &:hover{
+                background: $color-brown-2;
+                border-radius: 0;
+                a{
+                    color: $color-white-0;
+                }
+            }
+            &:focus{
+                background: transparent;
+                outline: none;
+                box-shadow: none;
+            }
+            
+        }
+    }
+}
+
+
+
+
+@include mediaQuery('medium'){
+    .header__content{
+        position: relative;
+        .header__logo {
+            margin: 0 auto;
+            text-align: center;
+        }
+        #navbarNav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            background: $color-white-0;
+            width: 100%;
+            text-align: center;
+        }
+        .top__right__header {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            .cart__number__bg{
+                right: 7px !important;
+            }
+        }
+    }
+}
+
+

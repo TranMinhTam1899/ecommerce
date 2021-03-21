@@ -1,0 +1,46 @@
+.solid_banner_area {
+    background: $color-brown-1;
+    text-align: center;
+    .solid_banner_inner{
+        padding: 30px 0;
+        h3{
+            text-transform: uppercase;
+            @include text-style($color-brown-0,$fs-3 + 6, $fw-bold-0);
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                display: inline-block;
+                a{
+                    @include text-style($color-brown-3,$fs-1, $fw-bold-0);
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.emty_cart_area{
+    padding: 100px 0;
+    text-align: center;
+    .emty_cart_inner{
+        h3{
+            font-family: "Poppins", sans-serif;
+            text-transform: capitalize;
+            letter-spacing: .60px;
+            padding: 15px 0px 10px 0px;
+            @include text-style($color-brown-3,$fs-3 + 4, $fw-bold-0);
+        }
+        h4{
+            text-transform: uppercase;
+            font-family: "Poppins", sans-serif;
+            @include text-style($color-brown-3,$fs-1, $fw-bold-0);
+            a{
+                color: $color-brown-3;
+            }
+        }
+
+    }
+}

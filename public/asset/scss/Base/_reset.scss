@@ -1,0 +1,44 @@
+
+.navbar-light {
+    .navbar-toggler{
+        border: none;
+        background-color: $color-white-0;
+        position: absolute;
+        top: -35px;
+        left: 10px;
+    }
+}
+
+.table th, .table td{
+    border-top: 1px solid $color-brown-2;
+    vertical-align: revert;
+    color: $color-brown-3;
+    text-align: center;
+}
+
+
+// filter price
+
+.input-range__slider{
+    background: $color-brown-3 !important;
+    border: 1px solid $color-brown-3 !important;
+}
+
+.input-range__track--active{
+    background: $color-brown-3 !important;
+}
+
+.input-range__label{
+    color: $color-brown-3 !important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, 
+.btn-secondary:not(:disabled):not(.disabled):active, 
+.show>.btn-secondary.dropdown-toggle{
+    background-color: transparent;
+    border: none;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}

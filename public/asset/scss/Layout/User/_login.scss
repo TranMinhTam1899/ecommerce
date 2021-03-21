@@ -1,0 +1,32 @@
+.login_inner {
+    width: 500px;
+    margin: 0 auto;
+    padding: 90px 0;
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include text-style($color-brown-3, $fs-4, $fw-bold);
+    }
+    .login_form{
+        input, select{
+            border-radius: 0;
+            border-color: $color-brown-3;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .update_btn, .subs_btn{
+            background-color: $color-brown-3;
+            color: $color-white-0;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .text-error{
+            @include text-style($color-orange-0,$fs-1,$fw-normal)
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.footer {
+    background-color: $color-brown-2;
+    padding: 20px 0;
+    .footer_title{
+        @include text-style($color-white-0,$fs-3 - 2,$fw-bold-0);
+        border-bottom: 2px solid $color-white-0;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    .info__content{
+        color: $color-white-0;
+    }
+    .res_email__main{
+        .frm_footer{
+            width: 100%;
+            position: relative;
+            input{
+                border-radius: 0%;
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .btn.btnSend {
+                text-align: center;
+                margin: 0 auto;
+                background: $color-brown-3;
+                margin-top: 10px;
+                display: table;
+                color: $color-white-0;
+            }
+        }
+    }
+}
+.copy__right{
+    background-color: $color-brown-3;
+    text-align: center;
+    padding: 15px 0;
+    .disign{
+        @include text-style($color-white-0,$fs-1,$fw-bold-2);
+        
+    }
+}

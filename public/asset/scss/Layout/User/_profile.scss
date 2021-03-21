@@ -1,0 +1,99 @@
+.profile {
+    padding: 40px 0;
+    .profile__content{
+        .profile__images{
+            .profile_avatar {
+                img {
+                    height: 318px;
+                }
+            }
+            .profile_button{
+                .btn_upload {
+                    margin: 0 auto;
+                    height: 35px;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .profile_info{
+            .profile__info__content{
+                h5{
+                    @include text-style($color-brown-3,$fs-3 + 5, $fw-bold-0 );
+                }
+                span{
+                    @include text-style($color-brown-3,$fs-3 - 2, $fw-normal);
+                    line-height: 35px;
+                }
+                .btn_func{
+                    .btn_update {
+                        height: 40px;
+                        border-radius: 0;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-content{
+    .modal-header{
+        .modal-title{
+            h5{
+                @include text-style($color-brown-3,$fs-3 + 2, $fw-bold-2 + 100);
+            }
+            .btnclose__frm{
+                padding: 0;
+                background-color: transparent;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                }
+                span{
+                    font-size: 35px !important;
+                    transform: translateX(-7px);
+                    @include text-style($color-brown-3,$fs-3 + 2, $fw-bold-2 + 100);
+                }
+            }
+        }
+        
+    }
+    #btn_Update_profile{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        background-color: #ab7a5fd1;
+        border: 1px solid #ab7a5fd1;
+        padding: 5px 27px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: normal;
+        position: relative;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color: $color-brown-3;
+        }
+        
+    }
+    input, select{
+        border-radius: 0;
+        border-color: $color-brown-3;
+        color: $color-brown-3;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            color: $color-brown-3;
+            border-color: $color-brown-3;
+        }
+        &::placeholder{
+            color: $color-brown-3;
+        }
+    }
+}

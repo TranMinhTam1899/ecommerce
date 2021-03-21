@@ -1,0 +1,114 @@
+
+
+
+// product info
+.product__detail{
+    padding: 30px 0;
+.product__detail__info{
+    .product__info__content{
+        h3{
+            @include text-style($color-brown-3,$fs-4, $fw-bold-0);
+        }
+        h4{
+            @include text-style($color-brown-3,$fs-4, $fw-bold-0);
+        }
+        .product__info__star{
+            .p_rating{
+                padding: 0;
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0 3px;
+                    a{
+                        @include text-style($color-yellow-0,$fs-3, $fw-bold-0);
+                    }
+                }
+            }
+        }
+        .product__info__text{
+            padding: 15px 0;
+                border-top: 1px solid $color-brown-2;
+                border-bottom: 1px solid $color-brown-2;
+            span{
+                text-align: justify;
+                @include text-style($color-black-1,$fs-2,$fw-normal);
+            }
+        }
+        .p_d_title {
+            @include text-style($color-brown-3,$fs-3 + 2,$fw-bold-0);
+            text-transform: uppercase;
+        }
+        .p_color{
+            .color_list{
+                padding: 0;
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .p_size{
+            .selectpicker {
+                width: 435px;
+                height: 40px;
+                border-radius: 0;
+                margin-bottom: 10px;
+                cursor: pointer;
+                padding: 0 10px;
+                background: #ab7a5f36;
+                border: 1px solid #ab7a5f;
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        .quantity{
+            display: flex;
+            .custom{
+                display: flex;
+                position: relative;
+                #sst{
+                    border-radius: 0;
+                    text-align: center;
+                    border: 1px solid #ab7a5f;
+                    width: 230px;
+                    height: 40px;
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                button{
+                    border-radius: 0; 
+                    position: absolute;
+                    top: 0;
+                }
+                .reduced {
+                    left: 0;
+                }
+                .increase{
+                    right: 0;
+                }
+
+            }
+            .add_cart_btn {
+                border: 1px solid $color-white-0;
+                margin: 0 7px;
+                width: 200px;
+                text-align: center;
+                background: #ab7a5f;
+                color: $color-white-0;
+                line-height: 35px;
+                text-transform: uppercase;
+                &:hover{
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+}
+
+}

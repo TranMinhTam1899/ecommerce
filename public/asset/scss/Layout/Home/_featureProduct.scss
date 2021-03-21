@@ -1,0 +1,31 @@
+.feature__product__wrapper{
+    background-color: $color-brown-1;
+    .feature__product_header{
+        padding: 20px 0;
+        .feature__product__title{
+            text-align: center;
+            @include text-style($color-black-0, $fs-4,$fw-bold-0);
+            position: relative;
+            padding: 10px 0;
+            &::before{
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 70px;
+                background: $color-brown-0;
+                bottom: 0;
+                left: 46%;
+            }
+        }
+    }
+    .feature__product__content{
+        padding: 20px;
+        .feature__product__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-gap: 1.875rem;
+            gap: 1.875rem;
+        }
+    }
+    
+}
