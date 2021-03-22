@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
 import InputRange from 'react-input-range';
+import { Link } from 'react-router-dom';
 
 const FilterProduct = (props) => {
 
     const [filterName, setFilterName] = useState('');
-    const [value, setValue]=useState({
+    const [value, setValue] = useState({
         min: 0,
-        max:1000
+        max: 1000
     })
+    const [filterCate, setFilterCate] = useState('');
 
     const onChange = (e) => {
-        var name = e.target.name;
-        var value = e.target.value;
+        let name = e.target.name;
+        let value = e.target.value;
         props.onFilter(
             name === 'filter' ? value : filterName
         )
         setFilterName(value);
     }
 
-    const onChangeFilterPrice=(value)=>{
+    const onChangeFilterPrice = (value) => {
         setValue(value);
         props.onFilterPrice(value);
     }
-    
-   
+
+    const onChangeFilterCata=(e)=>{
+        let value = e.target.value;
+        props.onFilterCata(value);
+        setFilterCate(value);
+    }
+
+
 
 
 
@@ -55,10 +63,41 @@ const FilterProduct = (props) => {
                         maxValue={1000}
                         minValue={0}
                         value={value}
-                        onChange={(value)=>onChangeFilterPrice(value)} />
+                        onChange={(value) => onChangeFilterPrice(value)} />
                 </div>
-               
             </aside>
+            <aside className="l_widgest l_menufacture_widget">
+                <div className="l_w_title">
+                    <h3>Filter catagory</h3>
+                </div>
+                <div className="filter_content" >
+                    <ul>
+                        <li>
+                            <div className="check_item">
+                                <input type="checkbox" id="c_sandals" name="sandals" value={"sandals"} onChange={onChangeFilterCata} />
+                                <label htmlFor="c_sandals">Dép</label>
+                                <div className="check" />
+                            </div>
+                        </li>
+                        <li>
+                            <div className="check_item">
+                                <input type="checkbox" id="c_shoes" name="shoes" value={"shoes"} onChange={onChangeFilterCata} />
+                                <label htmlFor="c_shoes">Giày</label>
+                                <div className="check" />
+                            </div>
+                        </li>
+                        <li>
+                            <div className="check_item">
+                                <input type="checkbox" id="c_shirt" name="shirt" value={"shirt"} onChange={onChangeFilterCata} />
+                                <label htmlFor="c_shirt">Áo khoát</label>
+                                <div className="check" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+
         </div>
     )
 }

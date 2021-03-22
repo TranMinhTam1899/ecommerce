@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { actAddToCart } from '../../redux/action/cartAction';
 import { actFetchProduct, actProductDetail } from '../../redux/action/productAction';
-import { actFilterPriceProduct, actFilterProduct } from '../../redux/action/filterProduct';
+import { actFilterCataProduct, actFilterPriceProduct, actFilterProduct } from '../../redux/action/filterProduct';
 import Product from './product';
 import SortProduct from './sortProduct';
 import FilterProduct from './filterProduct';
@@ -13,9 +13,10 @@ import 'react-input-range/lib/css/index.css';
 
 const ProductList = (props) => {
 
-    let { listProducts, sort, filterName, filterPrice } = props;
+    let { listProducts, sort, filterName, filterPrice, filterCata } = props;
     const [numItem, setNumItem] = useState(8);
     const [view, setView] = useState(1);
+    console.log(filterCata);
 
     useEffect(() => {
         props.fetchAllProduct();
@@ -41,6 +42,10 @@ const ProductList = (props) => {
         props.onFilterPriceProduct(value);
     }
 
+    const onFilterCata = (cata) => {
+        props.onFilterCataProduct(cata);
+    }
+
 
     listProducts.sort((a, b) => {
         if (a.name > b.name) return sort.value;
@@ -54,6 +59,16 @@ const ProductList = (props) => {
 
     listProducts = listProducts.filter((product) => {
         return product.pricePromo >= filterPrice.min && product.pricePromo <= filterPrice.max;
+    })
+
+    listProducts=listProducts.filter((proudct)=>{
+        let resuld=[];
+        filterCata.filter((cata)=>{
+            if(proudct.type===cata){
+                resuld=cata;
+            }
+        })
+        return filterCata.length <=0 ? proudct : proudct.type===resuld;
     })
 
 
@@ -80,6 +95,7 @@ const ProductList = (props) => {
                                     <FilterProduct
                                         onFilter={(filterName) => onFilter(filterName)}
                                         onFilterPrice={(value) => onFilterPrice(value)}
+                                        onFilterCata={(cata) => onFilterCata(cata)}
                                     />
 
                                 </div>
@@ -113,7 +129,7 @@ const ProductList = (props) => {
                                 </div>
                                 <div className="categories_product_area">
                                     <div className="Filter_Resuld">
-                                        <span className="span_Resuld">Có 0 kết quả được tìm thấy</span>
+                                        <span className="span_Resuld">Có {listProducts.length} kết quả được tìm thấy</span>
                                     </div>
                                     
                                     <div className={view === 1 ? 'list__product__grid' : 'list_product_grid_row'}>
@@ -160,6 +176,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         onFilterPriceProduct: (value) => {
             dispatch(actFilterPriceProduct(value));
+        },
+        onFilterCataProduct: (cata) => {
+            dispatch(actFilterCataProduct(cata));
         }
 
     }
@@ -170,7 +189,8 @@ const mapStateToProps = (state) => {
         listProducts: state.products.productList,
         sort: state.sortProduct,
         filterName: state.filterProduct.name,
-        filterPrice: state.filterProduct.filterPrice
+        filterPrice: state.filterProduct.filterPrice,
+        filterCata: state.filterProduct.filterCata,
     }
 }
 

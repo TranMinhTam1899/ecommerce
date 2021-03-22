@@ -13,3 +13,10 @@ export const actFilterPriceProduct=(value)=>{
         value
     }
 }
+
+export const actFilterCataProduct=(cata)=>{
+    return {
+        type: actionType.FILTER_CATA_PRODUCT,
+        cata
+    }
+}

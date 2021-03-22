@@ -64,6 +64,7 @@ const Product = (props) => {
                             </li>
                         </ul>
                     </div>
+                    <p className="product-item__price">{product.type}</p>
                     <p className="product-item__price">${product.price}</p>
                 </div>
             </div>

@@ -7,8 +7,8 @@ import { actAddToCart } from '../../redux/action/cartAction';
 
 const ProductDetail = (props) => {
 
-    const [product, setProduct]=useState([]);
-    const [quanty, setQuanty]=useState(1);
+    const [product, setProduct] = useState([]);
+    const [quanty, setQuanty] = useState(1);
 
     const onUpdateQuanty = (quanty) => {
         if (quanty > 0) {
@@ -16,9 +16,9 @@ const ProductDetail = (props) => {
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setProduct(props.product);
-    },[props.product]);
+    }, [props.product]);
 
     const onAddToCart = (product, quanty) => {
         props.onAddToCart(product, quanty);
@@ -51,21 +51,22 @@ const ProductDetail = (props) => {
                                 <p className="product__info__text">
                                     <span>{product.content}</span>
                                 </p>
-                                <div className="p_color" style={{ display: 'none' }}>
-                                    <h4 className="p_d_title">color <span>*</span></h4>
+                                <div className="p_color " style={{ display: 'none' }}>
+                                    <h4 className="p_d_title">color</h4>
                                     <ul className="color_list">
+                                        
                                         <li>
                                             <ButtonColor Color='red' className="btn" />
                                         </li>
                                         <li>
                                             <ButtonColor Color='green' className="btn" />
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
-                                <div className="p_size" style={{ display: 'none' }}>
-                                    <h4 className="p_d_title">size <span>*</span></h4>
-                                    <select className="selectpicker">
+                                <div className="p_size" >
+                                    <h4 className="p_d_title">size</h4>
+                                    <select className="selectpicker" style={{ display: 'none' }}>
                                         <option>Select your size</option>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
@@ -75,15 +76,15 @@ const ProductDetail = (props) => {
                                 </div>
                                 <div className="quantity">
                                     <div className="custom">
-                                        <button  className="reduced items-count" type="button" onClick={() => onUpdateQuanty(quanty - 1)}>
+                                        <button className="reduced items-count" type="button" onClick={() => onUpdateQuanty(quanty - 1)}>
                                             <i class="fa fa-minus" aria-hidden="true"></i>
                                         </button>
                                         <input type="text" name="qty" id="sst" className="input-text qty" maxLength={12} value={quanty} />
-                                        <button  className="increase items-count" type="button" onClick={() => onUpdateQuanty(quanty + 1)}>
+                                        <button className="increase items-count" type="button" onClick={() => onUpdateQuanty(quanty + 1)}>
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </div>
-                                    <Link className="add_cart_btn" href="#" onClick={()=>onAddToCart(product, quanty)}>add to cart</Link>
+                                    <Link className="add_cart_btn" href="#" onClick={() => onAddToCart(product, quanty)}>add to cart</Link>
                                 </div>
                             </div>
                         </div>
