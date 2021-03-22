@@ -49,12 +49,15 @@ const FilterProduct = (props) => {
                 <div className="l_w_title">
                     <h3>Filter price</h3>
                 </div>
-                <InputRange id="filterPriceSele" name="filterPrice"
-                    formatLabel={value => `${value}$`}
-                    maxValue={1000}
-                    minValue={0}
-                    value={value}
-                    onChange={(value)=>onChangeFilterPrice(value)} />
+                <div className="filter_content">
+                    <InputRange id="filterPriceSele" name="filterPrice"
+                        formatLabel={value => `${value}$`}
+                        maxValue={1000}
+                        minValue={0}
+                        value={value}
+                        onChange={(value)=>onChangeFilterPrice(value)} />
+                </div>
+               
             </aside>
         </div>
     )

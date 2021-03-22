@@ -3,6 +3,10 @@
     .categories_sidebar {
         aside.l_widgest {
             margin-bottom: 20px;
+            .filter_content{
+                padding: 0 18px;
+                margin-bottom: 30px;
+            }
             .l_w_title {
                 position: relative;
                 padding-bottom: 15px;
@@ -103,6 +107,7 @@
     .categories_product_area {
         .Filter_Resuld{
             margin-bottom: 20px;
+            text-align: end;
             .span_Resuld{
                 @include text-style($color-brown-3, $fs-1, $fw-normal);
             }
@@ -188,6 +193,42 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+@include mediaQuery('medium'){
+    .first_fillter {
+        display: none;
+    }
+    .categories_product_main {
+        .showing_fillter {
+            h4{
+                font-size: 12px;
+            }
+            .selectpicker{
+                font-size: 12px;
+                width: max-content;
+            }
+            .secand_fillter, .third_fillter{
+                flex: 0 0 35%;
+                max-width: 35%;
+            }
+            .four_fillter {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+        .list_product_grid_row{
+            .product__content{
+                    .overplay__content{
+                        button{
+                            padding: 4px;
+                            font-size: 14px;
+                        }
+                    }
+                }
         }
     }
 }

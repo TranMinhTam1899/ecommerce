@@ -97,7 +97,6 @@ const ProductList = (props) => {
                                                 <option value={8} >8 item</option>
                                                 <option value={6} >6 item</option>
                                                 <option value={4} >4 item</option>
-
                                             </select>
                                         </div>
                                         <SortProduct onSort={(sort) => onSort(sort)} />
@@ -131,17 +130,6 @@ const ProductList = (props) => {
                                             })
                                         }
                                     </div>
-                                    {/* <nav aria-label="Page navigation example" className="pagination_area">
-                                        <ul className="pagination">
-                                            <li className="page-item"><a className="page-link" href="#">1</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">4</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">5</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">6</a></li>
-                                            <li className="page-item next"><a className="page-link" href="#"><i className="fa fa-angle-right" aria-hidden="true" /></a></li>
-                                        </ul>
-                                    </nav> */}
                                 </div>
                             </div>
                         </div>

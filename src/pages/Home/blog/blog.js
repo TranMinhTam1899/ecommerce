@@ -9,7 +9,7 @@ const Blog=()=> {
                         <h2>From The Blog</h2>
                     </div>
                     <div className="row">
-                        <div className="col-lg-4 col-sm-6">
+                        <div className="col-lg-4 col-sm-6 col-xs-12">
                             <div className="from_blog_item">
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-1.jpg" alt="blog 1" />
                                 <div className="f_blog_text">
@@ -19,7 +19,7 @@ const Blog=()=> {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6">
+                        <div className="col-lg-4 col-sm-6 col-xs-12">
                             <div className="from_blog_item">
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-2.jpg" alt="blog 1" />
                                 <div className="f_blog_text">
@@ -29,7 +29,7 @@ const Blog=()=> {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6">
+                        <div className="col-lg-4 col-sm-6 col-xs-12">
                             <div className="from_blog_item">
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-3.jpg" alt="blog 1" />
                                 <div className="f_blog_text">

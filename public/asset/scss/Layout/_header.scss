@@ -169,4 +169,30 @@
     }
 }
 
+@include mediaQuery('medium'){
+    .header__content{
+        position: relative;
+        .header__logo {
+            margin: 0 auto;
+            text-align: center;
+        }
+        #navbarNav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            background: $color-white-0;
+            width: 100%;
+            text-align: center;
+        }
+        .top__right__header {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            .cart__number__bg{
+                right: 7px !important;
+            }
+        }
+    }
+}
+
 

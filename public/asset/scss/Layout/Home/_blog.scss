@@ -22,6 +22,10 @@
     .from_blog_item {
         position: relative;
         z-index: 3;
+        .img-fluid{
+          width: 100%;
+          margin-bottom: 15px;
+        }
         .f_blog_text {
             position: absolute;
             bottom: 20px;

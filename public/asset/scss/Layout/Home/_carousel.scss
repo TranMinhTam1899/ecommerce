@@ -1,15 +1,17 @@
 .home_carousel_area {
     margin-bottom: 30px;
+    position: relative;
     .h_carousel_item {
         position: relative;
         max-height: 600px;
         .carousel_hover {
             position: absolute;
             bottom: 20%;
-            left: 35%;
             text-align: center;
             color: $color-white-0;
             line-height: 50px;
+            width: 100%;
+            margin: 0 auto;
             h3 {
                 text-transform: uppercase;
                 @include text-style($color-white-0, $fs-4, $fw-bold);
@@ -64,9 +66,46 @@
             button.active{
                 background: $color-white-0 !important;
             }
-        }
-        
-        
-        
+        }   
     }
 }
+
+
+
+@include mediaQuery('medium'){
+    .home_carousel_area {
+        .h_carousel_item {
+            margin-top: 15px;
+            .carousel_hover{
+                left: 0;
+                top: 0;
+                line-height: 18px;
+                padding: 20px 40px;
+                h3{
+                    font-size: 20px;
+                }
+                h4, h5{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                .discover_btn{
+                    font-size: 10px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        .home_carousel_slider {
+            .owl-dots{
+                bottom: 10px;
+                button {
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+        }
+    }
+}
+
+

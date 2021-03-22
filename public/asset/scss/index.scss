@@ -5,12 +5,9 @@
 @import './Base/_customize.scss';
 
 
-@import './Component/_button.scss';
-@import './Component/_search.scss';
-@import './Component/_checked.scss';
-
 // layout
 @import './Layout/_header.scss';
+
 @import './Layout/Home/_carousel.scss';
 @import './Layout/Home/_featureProduct.scss';
 @import './Layout/Home/_product.scss';
@@ -22,6 +19,7 @@
 @import './Layout/User/_login.scss';
 @import './Layout/User/_profile.scss';
 @import './Layout/_loading.scss';
+
 
 
 

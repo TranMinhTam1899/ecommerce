@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Carousel = () => {
     return (
         <section className="home_carousel_area">
-            <ReactOwlCarousel className="home_carousel_slider" items={1} loop nav dots  autoplay autoplayTimeout={8000} >
+            <ReactOwlCarousel className="home_carousel_slider" items={1} loop nav dots autoplay autoplayTimeout={8000}  >
                 <div className="item">
                     <div className="h_carousel_item">
                         <img src="../asset/images/carousel/fullwidth-item-3.jpg" width="100%" alt="fullwidth-item-3.jpg" />

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from '../../component/img/img';
 import ButtonIcon from '../../component/button/buttonIcon';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     const { product } = props;
+    const [loading, setLoading] = useState(false);
 
     const onProductDetail = (id) => {
         props.onProductDetail(id);
     }
 
     const onAddToCart = (product) => {
-        props.onAddToCart(product);
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            props.onAddToCart(product);
+        }, 500);
+       
     }
 
     
@@ -28,7 +34,10 @@ const Product = (props) => {
                     <div className="products_overplay">
                         <div className="overplay__content">
                             <ButtonIcon Type={'submit'} Title={''} Icon={'fa-heart-o'} className="func__wishlist" />
-                            <button type="submit" className="func__cart" onClick={() => onAddToCart(product)}>Add to cart</button>
+                            <button type="submit" className="func__cart" onClick={() => onAddToCart(product)}>
+                                
+                                {loading ? <span className="btn_loading"><i class="fa fa-spinner" aria-hidden="true" ></i> Loading...</span> : <span>Add to cart</span>}
+                            </button>
                             <ButtonIcon Type={'submit'} Title={''} Icon={'fa-eye'} className="func__eye" />
                         </div>
                     </div>
