@@ -16,11 +16,11 @@ const EmptyCart = () => {
                     </div>
                 </div>
             </section>
-            <section class="emty_cart_area p_100">
-                <div class="container">
+            <section className="emty_cart_area p_100">
+                <div className="container">
                     <Img Url={'../asset/images/logo.png'} width={'100%'} />
-                    <div class="emty_cart_inner">
-                        <i class="icon-handbag icons"></i>
+                    <div className="emty_cart_inner">
+                        <i className="icon-handbag icons"></i>
                         <h3>Your Cart is Empty</h3>
                         <h4>back to <Link to="/">shopping</Link></h4>
                     </div>

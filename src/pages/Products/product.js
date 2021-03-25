@@ -36,7 +36,7 @@ const Product = (props) => {
                             <ButtonIcon Type={'submit'} Title={''} Icon={'fa-heart-o'} className="func__wishlist" />
                             <button type="submit" className="func__cart" onClick={() => onAddToCart(product)}>
                                 
-                                {loading ? <span className="btn_loading"><i class="fa fa-spinner" aria-hidden="true" ></i> Loading...</span> : <span>Add to cart</span>}
+                                {loading ? <span className="btn_loading"><i className="fa fa-spinner" aria-hidden="true" ></i> Loading...</span> : <span>Add to cart</span>}
                             </button>
                             <ButtonIcon Type={'submit'} Title={''} Icon={'fa-eye'} className="func__eye" />
                         </div>
@@ -64,7 +64,6 @@ const Product = (props) => {
                             </li>
                         </ul>
                     </div>
-                    <p className="product-item__price">{product.type}</p>
                     <p className="product-item__price">${product.price}</p>
                 </div>
             </div>

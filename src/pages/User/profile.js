@@ -25,7 +25,7 @@ const Profile = (props) => {
                                 </div>
                                 <div className="profile_button">
                                     <button className="btn_upload" onClick={onUpload}>
-                                        <i class="fa fa-upload" aria-hidden="true" style={{ paddingRight: 20 }}></i>
+                                        <i className="fa fa-upload" aria-hidden="true" style={{ paddingRight: 20 }}></i>
                                 Tải ảnh lên
                             </button>
                                 </div>

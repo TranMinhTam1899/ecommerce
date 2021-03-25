@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import InputRange from 'react-input-range';
-import { Link } from 'react-router-dom';
 
 const FilterProduct = (props) => {
 
@@ -10,6 +9,7 @@ const FilterProduct = (props) => {
         max: 1000
     })
     const [filterCate, setFilterCate] = useState('');
+    console.log(filterCate);
 
     const onChange = (e) => {
         let name = e.target.name;

@@ -64,9 +64,9 @@ const ProductDetail = (props) => {
 
                                     </ul>
                                 </div>
-                                <div className="p_size" >
+                                <div className="p_size" style={{ display: 'none' }} >
                                     <h4 className="p_d_title">size</h4>
-                                    <select className="selectpicker" style={{ display: 'none' }}>
+                                    <select className="selectpicker" >
                                         <option>Select your size</option>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>

@@ -19,6 +19,32 @@
         }
     }
     .feature__product__content{
+        .fillter_l_p{
+            display: block;
+            width: 100%;
+            text-align: center;
+            li{
+                display: inline-block;
+                margin: 0 15px;
+                a{
+                    font-family: "Montserrat", sans-serif;
+                    text-transform: uppercase;
+                    letter-spacing: .40px;
+                    -webkit-transition: all 400ms linear 0s;
+                    -o-transition: all 400ms linear 0s;
+                    transition: all 400ms linear 0s;
+                    @include text-style($color-brown-3, $fs-2, $fw-bold-2 + 100);
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    
+                }
+                
+            }
+            li.active a{
+                font-weight: bold;
+            }
+        }
         padding: 20px;
         .feature__product__grid {
             display: grid;

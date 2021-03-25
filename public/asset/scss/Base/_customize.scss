@@ -63,6 +63,7 @@ li{
 }
 
 
+
   .btn_loading{
     &::before {
       content: "";
@@ -83,4 +84,38 @@ li{
   100% { transform: rotate(360deg); }
 }
 
+.pagination_area {
+  float: right;
+  .pagination {
+      .page-item {
+              position: relative;
+              display: block;
+              padding: 0.5rem 0.75rem;
+              margin-left: -1px;
+              line-height: 1.25;
+              color: $color-brown-3;
+              background-color: $color-white-0;
+              border: 1px solid $color-brown-2;
+              border-radius: 0;
+              cursor: pointer;
+              &:hover{
+                  background-color: $color-brown-3;
+              color: $color-white-0;
+              }
+              &:focus{
+                  outline: none;
+                  box-shadow: none;
+                }
+          }
+          .page-item.active{
+              background-color: $color-brown-3;
+              color: $color-white-0;
+          }
+      
+  }
+}
 
+.disabled{
+  z-index: -1;
+  color: #dee2e6 !important;
+}

@@ -162,41 +162,9 @@
             }
             
         }
-
-
-
-        .pagination_area {
-            float: right;
-            .pagination {
-                .page-item {
-                    .page-link {
-                        position: relative;
-                        display: block;
-                        padding: 0.5rem 0.75rem;
-                        margin-left: -1px;
-                        line-height: 1.25;
-                        color: $color-brown-3;
-                        background-color: $color-white-0;
-                        border: 1px solid $color-brown-2;
-                        border-radius: 0;
-                        &:hover{
-                            background-color: $color-brown-3;
-                        color: $color-white-0;
-                        }
-                        &:focus{
-                            outline: none;
-                            box-shadow: none;
-                          }
-                    }
-                    .page-link.active{
-                        background-color: $color-brown-3;
-                        color: $color-white-0;
-                    }
-                }
-            }
-        }
     }
 }
+
 
 
 @include mediaQuery('medium'){
