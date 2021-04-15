@@ -22,41 +22,52 @@
     .from_blog_item {
         position: relative;
         z-index: 3;
+        padding-bottom: 20px;
+        border-radius: 5px;
+         &:hover{
+          -webkit-box-shadow: 0px 0px 37px 0px rgba(161,159,161,1);
+          -moz-box-shadow: 0px 0px 37px 0px rgba(161,159,161,1);
+          box-shadow: 0px 0px 37px 0px rgba(161,159,161,1);
+         }
         .img-fluid{
           width: 100%;
           margin-bottom: 15px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
         }
         .f_blog_text {
-            position: absolute;
-            bottom: 20px;
-            left: 0px;
             width: 100%;
             padding: 0 $spacing-5;
             z-index: 2;
             font-family: "Poppins", sans-serif;
-            h5 {
-                background: $color-white-0;
-                @include text-style($color-black-0, $fs-1, $fw-bold-2 + 100);
-                padding:0 $spacing-1;
-                text-transform: uppercase;
-                display: inline-block;
-                line-height: 25px;
-                -webkit-transition: all 400ms linear 0s;
-                -o-transition: all 400ms linear 0s;
-                transition: all 400ms linear 0s;
-                cursor: pointer;
-                &:hover{
-                    background: $color-brown-2;
-                    color: $color-white-0;
-                }
-            }
+            
             p {
                 padding: 12px 0px 7px 0px;
-                @include text-style($color-white-0, $fs-3 - 2, $fw-bold-2);
+                @include text-style($color-brown-3, $fs-3 - 2, $fw-bold-2);
             }
             h6 {
                 @include text-style($color-white-0, $fs-3 - 2, $fw-bold-2);
             }
+            .btn_fast {
+              border: 2px solid $color-brown-3;
+              border-radius: 25px;
+              background: $color-white-0;
+              @include text-style($color-brown-3, $fs-1, $fw-bold-2 + 100);
+              padding:$spacing-0 $spacing-4;
+              text-transform: uppercase;
+              display: inline-block;
+              line-height: 25px;
+              -webkit-transition: all 400ms linear 0s;
+              -o-transition: all 400ms linear 0s;
+              transition: all 400ms linear 0s;
+              cursor: pointer;
+              margin: 0 auto;
+              &:hover{
+                  background: $color-brown-3;
+                  color: $color-white-0;
+                  text-decoration: none;
+              }
+          }
         }
     }
   }

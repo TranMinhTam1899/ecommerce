@@ -77,11 +77,11 @@ const ProductDetail = (props) => {
                                 <div className="quantity">
                                     <div className="custom">
                                         <button className="reduced items-count" type="button" onClick={() => onUpdateQuanty(quanty - 1)}>
-                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                            <i className="fa fa-minus" aria-hidden="true"></i>
                                         </button>
                                         <input type="text" name="qty" id="sst" className="input-text qty" maxLength={12} value={quanty} />
                                         <button className="increase items-count" type="button" onClick={() => onUpdateQuanty(quanty + 1)}>
-                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            <i className="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </div>
                                     <Link className="add_cart_btn" href="#" onClick={() => onAddToCart(product, quanty)}>add to cart</Link>

@@ -20,7 +20,7 @@ const ProductList = (props) => {
 
 
     const chosePage = (event) => {
-        setCurrentPage(Number(event.target.id));  
+        setCurrentPage(Number(event.target.id));
     }
 
     const select = (event) => {
@@ -74,32 +74,28 @@ const ProductList = (props) => {
 
     listProducts = listProducts.filter((proudct) => {
         let resuld = [];
-
         filterCata.filter((cata) => {
             if (proudct.type === cata) {
                 resuld = cata;
             }
         })
-
         return filterCata.length <= 0 ? proudct : proudct.type === resuld;
     })
 
-    const onPrevPages=()=>{
-        if(currentPage -1 < 2)
-        {
+    const onPrevPages = () => {
+        if (currentPage - 1 < 2) {
             setCurrentPage(currentPage - 1);
             setDisabled(true);
-            
-        }else{
+
+        } else {
             setCurrentPage(currentPage - 1);
         }
     }
 
-    const onNextPages=()=>{
+    const onNextPages = () => {
         
             setCurrentPage(currentPage + 1);
-        
-       
+
     }
 
 
@@ -192,11 +188,11 @@ const ProductList = (props) => {
                                         }
                                     </div>
                                 </div>
-                                <nav aria-label="Page navigation example" class="pagination_area">
+                                <nav aria-label="Page navigation example" className="pagination_area">
                                     <ul className="pagination" id="page-numbers">
-                                        
-                                            {(reversedItems.length / newsPerPage) > 1 ?  <li className={(disabled && currentPage===1)?'page-item btnPrev disabled' :'page-item btnPrev'} id="btnPrev" onClick={onPrevPages} dis>{"<"}</li> : ""}
-                                        
+
+                                        {(reversedItems.length / newsPerPage) > 1 ? <li className={(disabled && currentPage === 1) ? 'page-item btnPrev disabled' : 'page-item btnPrev'} id="btnPrev" onClick={onPrevPages} dis>{"<"}</li> : ""}
+
                                         {
                                             pageNumbers.map(number => {
                                                 if (currentPage === number) {
@@ -216,7 +212,7 @@ const ProductList = (props) => {
                                                 }
                                             })
                                         }
-                                         {(reversedItems.length / newsPerPage) > 1 ? <li  className={(disabled && currentPage === (reversedItems.length / newsPerPage))?'page-item btnNext disabled': 'page-item btnNext'} onClick={onNextPages}>{">"}</li>: ""}
+                                        {(reversedItems.length / newsPerPage) > 1 ? <li className={(disabled && currentPage === (reversedItems.length / newsPerPage)) ? 'page-item btnNext disabled' : 'page-item btnNext'} onClick={onNextPages}>{">"}</li> : ""}
                                     </ul>
                                 </nav>
                             </div>
