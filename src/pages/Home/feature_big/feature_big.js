@@ -1,26 +1,46 @@
-import React from 'react'
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const FeatureBig = () => {
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
+
+
     return (
         <section className="feature_big pt-5">
             <div className="container">
                 <div className="feature_big_content">
-                    <div className="row">
-                        <div className="col-lg-6 col-sm-6 col-xs-12">
-                            <div className="feature_big_item">
-                                <div className="feature_img">
-                                    <img src="../asset/images/featureBig/f-add-8.jpg" className="w-100" alt="" />
-                                </div>
+                    <Slider {...settings}>
+                        <div className="feature_big_item px-2">
+                            <div className="feature_img">
+                                <img src="../asset/images/featureBig/f-add-8.jpg" className="w-100" alt="" />
                             </div>
                         </div>
-                        <div className="col-lg-6 col-sm-6 col-xs-12">
-                            <div className="feature_big_item">
-                                <div className="feature_img">
-                                    <img src="../asset/images/featureBig/f-add-9.jpg" className="w-100" alt="" />
-                                 </div>                         
+                        <div className="feature_big_item px-2">
+                            <div className="feature_img">
+                                <img src="../asset/images/featureBig/f-add-9.jpg" className="w-100" alt="" />
                             </div>
                         </div>
-                    </div>
+                        <div className="feature_big_item px-2">
+                            <div className="feature_img">
+                                <img src="../asset/images/featureBig/f-add-8.jpg" className="w-100" alt="" />
+                            </div>
+                        </div>
+                        <div className="feature_big_item px-2">
+                            <div className="feature_img">
+                                <img src="../asset/images/featureBig/f-add-9.jpg" className="w-100" alt="" />
+                            </div>
+                        </div>
+                    </Slider>
                 </div>
             </div>
 

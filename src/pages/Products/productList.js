@@ -191,14 +191,13 @@ const ProductList = (props) => {
                                 <nav aria-label="Page navigation example" className="pagination_area">
                                     <ul className="pagination" id="page-numbers">
 
-                                        {(reversedItems.length / newsPerPage) > 1 ? <li className={(disabled && currentPage === 1) ? 'page-item btnPrev disabled' : 'page-item btnPrev'} id="btnPrev" onClick={onPrevPages} dis>{"<"}</li> : ""}
+                                        {(reversedItems.length / newsPerPage) > 1 ? <li className={(disabled && currentPage === 1) ? 'page-item btnPrev disabled' : 'page-item btnPrev'} id="btnPrev" onClick={onPrevPages}>{"<"}</li> : ""}
 
                                         {
                                             pageNumbers.map(number => {
                                                 if (currentPage === number) {
                                                     return (
                                                         <li key={number} id={number} className="active page-item">
-
                                                             {number}
                                                         </li>
                                                     )

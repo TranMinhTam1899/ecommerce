@@ -4,7 +4,7 @@
     padding: 20px 0;
     .feature__product__title {
       text-align: center;
-      @include text-style($color-black-0, $fs-4, $fw-bold-0);
+      @include text-style($color-brown-3, $fs-4, $fw-bold-0);
       position: relative;
       padding: 10px 0;
       &::before {

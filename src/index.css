@@ -124,6 +124,9 @@ li {
     background-color: #7c5743;
     color: #fff; }
 
+.slick-prev, .slick-next {
+  display: none !important; }
+
 .disabled {
   z-index: -1;
   color: #dee2e6 !important; }

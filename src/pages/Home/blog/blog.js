@@ -15,7 +15,7 @@ const Blog=()=> {
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-1.jpg" alt="blog 1" />
                                 <div className="f_blog_text text-center">
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <Link to="#" class="btn_fast">fashion</Link>
+                                    <Link to="#" className="btn_fast">fashion</Link>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +24,7 @@ const Blog=()=> {
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-2.jpg" alt="blog 1" />
                                 <div className="f_blog_text text-center">
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <Link to="#" class="btn_fast">fashion</Link>
+                                    <Link to="#" className="btn_fast">fashion</Link>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ const Blog=()=> {
                                 <img className="img-fluid" src="../asset/images/blog/f-blog-3.jpg" alt="blog 1" />
                                 <div className="f_blog_text text-center">
                                     <p>Neque porro quisquam est qui dolorem ipsum</p>
-                                    <Link to="#" class="btn_fast">fashion</Link>
+                                    <Link to="#" className="btn_fast">fashion</Link>
                                 </div>
                             </div>
                         </div>

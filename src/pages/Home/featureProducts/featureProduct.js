@@ -41,8 +41,8 @@ const FeatureProduct = (props) => {
                                 })
                             }
                         </div>
-                        <div class="w-100 pt-3 text-center">
-                        <Link class="btn_fast" to="/product">Xem thêm</Link>
+                        <div className="w-100 pt-3 text-center">
+                        <Link className="btn_fast" to="/product">Xem thêm</Link>
                         </div>
                         
                     </div>

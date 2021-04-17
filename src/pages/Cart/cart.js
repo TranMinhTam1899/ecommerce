@@ -17,6 +17,14 @@ const Cart = (props) => {
         props.onUpdateInCart(id, quanty);
     }
 
+    const onCheckPay=()=>{
+        if(localStorage.getItem('user')){
+            console.log("đã đăng nhập");
+        }else{
+            alert('Vui lòng đăng nhập để thanh toán')
+        }
+    }
+
 
     const totalAmount = (cart) => {
 
@@ -89,6 +97,8 @@ const Cart = (props) => {
                                         </table>
                                     </div>
                                 </div>
+           
+                           
                             </div>
                             <div className="col-lg-4">
                                 <div className="cart_totals_area">
@@ -120,7 +130,7 @@ const Cart = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" value="submit" className="btn subs_btn form-control">Proceed to checkout</button>
+                                <button type="submit"className="btn subs_btn form-control" onClick={()=>onCheckPay()}>Proceed to checkout</button>
                             </div>
                         </div>
                     </div>

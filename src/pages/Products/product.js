@@ -17,10 +17,16 @@ const Product = (props) => {
             setLoading(false);
             props.onAddToCart(product);
         }, 500);
-       
+
     }
 
-    
+    const onShowProduct=(product)=>{
+        console.log('====================================');
+        console.log(product);
+        console.log('====================================');
+    }
+
+
 
 
     return (
@@ -35,10 +41,12 @@ const Product = (props) => {
                         <div className="overplay__content">
                             <ButtonIcon Type={'submit'} Title={''} Icon={'fa-heart-o'} className="func__wishlist" />
                             <button type="submit" className="func__cart" onClick={() => onAddToCart(product)}>
-                                
+
                                 {loading ? <span className="btn_loading"><i className="fa fa-spinner" aria-hidden="true" ></i> Loading...</span> : <span>Add to cart</span>}
                             </button>
-                            <ButtonIcon Type={'submit'} Title={''} Icon={'fa-eye'} className="func__eye" />
+                            <button type="submit" className="func__eye"  onClick={()=>onShowProduct(product)}>
+                                <i className="fa fa-eye" aria-hidden="true" ></i>
+                            </button>
                         </div>
                     </div>
                 </div>

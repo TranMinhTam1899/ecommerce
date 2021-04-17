@@ -6,21 +6,21 @@ const FeatureAdd = () => {
             <div className="container">
                 <div className="feature_add_content">
                     <div className="row">
-                        <div className="col-lg-5">
+                        <div className="col-lg-5 pb-3">
                             <div className="feature_big_item">
                                 <div className="feature_img">
                                     <img src="../asset/images/featureAdd/f-add-1.jpg" className="w-100" alt="" />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 pb-3">
                             <div className="feature_big_item">
                                 <div className="feature_img">
                                     <img src="../asset/images/featureAdd/f-add-2.jpg" className="w-100" alt="" />
                                  </div>                         
                             </div>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 pb-3">
                             <div className="feature_big_item">
                                 <div className="feature_img">
                                     <img src="../asset/images/featureAdd/f-add-3.jpg" className="w-100" alt="" />
