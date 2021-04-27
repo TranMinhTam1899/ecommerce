@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row } from 'reactstrap';
 
 const AddressCustomer = () => {
     return (
@@ -10,20 +11,20 @@ const AddressCustomer = () => {
             </div>
             <div class="addressCustomer_content">
                 <form>
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <Row>
+                        <Col md="6">
                             <select class="form-control">
                                 <optgroup>
                                     <option>1</option>
                                 </optgroup>
                             </select>
-                        </div>
-                        <div class="col-lg-6">
+                        </Col>
+                        <Col md="6">
                             <select class="form-control">
                                 <option>1</option>
                             </select>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                 </form>
             </div>
         </section>

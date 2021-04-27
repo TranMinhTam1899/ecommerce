@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Container } from 'reactstrap';
 
 const FeatureBig = () => {
 
@@ -17,7 +18,7 @@ const FeatureBig = () => {
 
     return (
         <section className="feature_big pt-5">
-            <div className="container">
+            <Container>
                 <div className="feature_big_content">
                     <Slider {...settings}>
                         <div className="feature_big_item px-2">
@@ -42,7 +43,7 @@ const FeatureBig = () => {
                         </div>
                     </Slider>
                 </div>
-            </div>
+            </Container>
 
         </section>
     )

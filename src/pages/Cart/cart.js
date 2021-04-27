@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
 import { actDeleteInCart, OnUpdateProductInCart } from '../../redux/action/cartAction';
 import CartItem from './cartItem';
 import EmptyCart from './emptyCart';
@@ -44,9 +45,8 @@ const Cart = (props) => {
     } else {
         return (
             <div>
-
                 <section className="solid_banner_area">
-                    <div className="container">
+                    <Container>
                         <div className="solid_banner_inner">
                             <h3>Shopping Cart</h3>
                             <ul>
@@ -54,13 +54,13 @@ const Cart = (props) => {
                                 <li><Link to="/cart">Shopping cart</Link></li>
                             </ul>
                         </div>
-                    </div>
+                    </Container>
                 </section>
 
                 <section className="shopping_cart_area p_100">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8">
+                    <Container>
+                        <Row>
+                            <Col md="8">
                                 <div className="cart_items">
                                     <h3>Your Cart Items</h3>
                                     <div className="table-responsive-md">
@@ -99,8 +99,8 @@ const Cart = (props) => {
                                 </div>
            
                            
-                            </div>
-                            <div className="col-lg-4">
+                            </Col>
+                            <Col md="4" >
                                 <div className="cart_totals_area">
                                     <h4>Cart Totals</h4>
                                     <div className="cart_t_list">
@@ -131,9 +131,9 @@ const Cart = (props) => {
                                     </div>
                                 </div>
                                 <button type="submit"className="btn subs_btn form-control" onClick={()=>onCheckPay()}>Proceed to checkout</button>
-                            </div>
-                        </div>
-                    </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </section>
 
             </div>

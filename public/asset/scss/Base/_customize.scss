@@ -115,9 +115,12 @@ li{
   }
 }
 
-.slick-prev, .slick-next {
-  display: none !important;
+.feature_big_content{
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
 }
+
 
 .disabled{
   z-index: -1;

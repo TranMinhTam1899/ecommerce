@@ -4,8 +4,6 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from 'react-router-dom';
 
-
-
 const Carousel = () => {
     return (
         <section className="home_carousel_area">

@@ -9,6 +9,7 @@ import SortProduct from './sortProduct';
 import FilterProduct from './filterProduct';
 import { actSordProduct } from '../../redux/action/sortProduct';
 import 'react-input-range/lib/css/index.css';
+import { Col, Container, Row } from 'reactstrap';
 
 const ProductList = (props) => {
 
@@ -93,8 +94,8 @@ const ProductList = (props) => {
     }
 
     const onNextPages = () => {
-        
-            setCurrentPage(currentPage + 1);
+
+        setCurrentPage(currentPage + 1);
 
     }
 
@@ -111,11 +112,15 @@ const ProductList = (props) => {
 
 
     const showProduct = listProducts.map((product, index) => {
-        return (<Product
-            key={index} product={product}
-            onProductDetail={(id) => onProductDetail(id)}
-            onAddToCart={(product) => onAddToCart(product)}
-        />)
+        return (
+            <div className={view === 1 ? 'col-md-6' : 'col-md-12 list_product_grid_row'}>
+                <Product
+                    key={index} product={product}
+                    onProductDetail={(id) => onProductDetail(id)}
+                    onAddToCart={(product) => onAddToCart(product)}
+                />
+            </div>
+        )
     });
 
 
@@ -124,7 +129,7 @@ const ProductList = (props) => {
     return (
         <div>
             <section className="solid_banner_area">
-                <div className="container">
+                <Container>
                     <div className="solid_banner_inner">
                         <h3>Product List</h3>
                         <ul>
@@ -132,14 +137,14 @@ const ProductList = (props) => {
                             <li><Link to="/product">&nbsp;Product</Link></li>
                         </ul>
                     </div>
-                </div>
+                </Container>
             </section>
 
             <section className="categories_product_main p_80">
-                <div className="container">
+                <Container>
                     <div className="categories_main_inner">
-                        <div className="row row_disable">
-                            <div className="col-lg-3 float-md-right">
+                        <Row className="row_disable">
+                            <Col md="3" className="float-md-right">
                                 <div className="categories_sidebar">
                                     <FilterProduct
                                         onFilter={(filterName) => onFilter(filterName)}
@@ -148,11 +153,11 @@ const ProductList = (props) => {
                                     />
 
                                 </div>
-                            </div>
+                            </Col>
 
-                            <div className="col-lg-9 float-md-right">
+                            <Col md="9" className="float-md-right">
                                 <div className="showing_fillter">
-                                    <div className="row m0">
+                                    <Row className="m0">
                                         <div className="first_fillter">
                                             <h4>Showing 1 to {newsPerPage} of {reversedItems.length} total</h4>
                                         </div>
@@ -174,19 +179,19 @@ const ProductList = (props) => {
                                                 <i className="fa fa-th" aria-hidden="true"></i>
                                             </Link>
                                         </div>
-                                    </div>
+                                    </Row>
                                 </div>
                                 <div className="categories_product_area">
                                     <div className="Filter_Resuld">
                                         <span className="span_Resuld">Có {reversedItems.length} kết quả được tìm thấy</span>
                                     </div>
 
-                                    <div className={view === 1 ? 'list__product__grid' : 'list_product_grid_row'}>
+                                    <Row>
                                         {
 
                                             showProduct
                                         }
-                                    </div>
+                                    </Row>
                                 </div>
                                 <nav aria-label="Page navigation example" className="pagination_area">
                                     <ul className="pagination" id="page-numbers">
@@ -214,10 +219,10 @@ const ProductList = (props) => {
                                         {(reversedItems.length / newsPerPage) > 1 ? <li className={(disabled && currentPage === (reversedItems.length / newsPerPage)) ? 'page-item btnNext disabled' : 'page-item btnNext'} onClick={onNextPages}>{">"}</li> : ""}
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
+                            </Col>
+                        </Row>
                     </div>
-                </div>
+                </Container>
             </section>
         </div>
     )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
 import ButtonColor from '../../component/button/buttonColor';
 import Img from '../../component/img/img';
 import { actAddToCart } from '../../redux/action/cartAction';
@@ -27,14 +28,14 @@ const ProductDetail = (props) => {
 
     return (
         <div className="product__detail">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4 col-sm-12 col-xs-12">
+            <Container>
+                <Row>
+                    <Col md="4" sm="12" xs="12">
                         <div className="product__detail__images">
                             <Img Url={product.images} Width={'100%'} />
                         </div>
-                    </div>
-                    <div className="col-md-8 col-sm-12 col-xs-12">
+                    </Col>
+                    <Col md="8" sm="12" xs="12">
                         <div className="product__detail__info">
                             <div className="product__info__content">
                                 <h3>{product.name}</h3>
@@ -84,14 +85,14 @@ const ProductDetail = (props) => {
                                             <i className="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </div>
-                                    <Link className="add_cart_btn" href="#" onClick={() => onAddToCart(product, quanty)}>add to cart</Link>
+                                    <Link className="add_cart_btn" to="#" onClick={() => onAddToCart(product, quanty)}>add to cart</Link>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Col>
 
-                </div>
-            </div>
+                </Row>
+            </Container>
         </div>
     )
 }

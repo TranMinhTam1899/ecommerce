@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
+import { ButtonDropdown, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, Row } from 'reactstrap';
 import { actLogout } from '../../redux/action/authAction';
 import Img from '../img/img';
 import Navigation from '../menu/navigation';
@@ -18,7 +18,7 @@ const Header = (props) => {
         if (userActive) {
             setIsLogin(true);
         }
-    },[userActive])
+    }, [userActive])
 
 
     const LogoutUser = () => {
@@ -83,21 +83,20 @@ const Header = (props) => {
 
     return (
         <header className="header">
-            <div className="container">
+            <Container>
                 <div className="header__content">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <div className="header__logo">
+                    <Row>
+                        <Col md="3" xs="12">
+                            <div className="header__logo text-center">
                                 <Link to="/">
                                     <Img Url={'../asset/images/logo.png'} />
                                 </Link>
-
                             </div>
-                        </div>
-                        <div className="col-md-6">
+                        </Col>
+                        <Col md="6" xs="12">
                             <Navigation />
-                        </div>
-                        <div className="col-md-3">
+                        </Col>
+                        <Col md="3" xs="12">
                             <div className="top__right__header">
                                 <ul className="top_right">
 
@@ -114,10 +113,10 @@ const Header = (props) => {
                                 </ul>
 
                             </div>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                 </div>
-            </div>
+            </Container>
         </header>
     )
 }

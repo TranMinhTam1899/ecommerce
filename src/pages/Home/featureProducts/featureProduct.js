@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { actAddToCart} from '../../../redux/action/cartAction';
-import {actFetchProduct, actProductDetail} from '../../../redux/action/productAction';
+import { actAddToCart } from '../../../redux/action/cartAction';
+import { actFetchProduct, actProductDetail } from '../../../redux/action/productAction';
 import Product from '../../Products/product';
 
 const FeatureProduct = (props) => {
@@ -15,7 +15,7 @@ const FeatureProduct = (props) => {
         props.onGetProductDetail(id);
     }
 
-    const onAddToCart = (product, quanty=1) => {
+    const onAddToCart = (product, quanty = 1) => {
         props.onAddToCart(product, quanty);
     }
 
@@ -28,23 +28,25 @@ const FeatureProduct = (props) => {
                         <h2 className="feature__product__title">Feature Products</h2>
                     </div>
                     <div className="feature__product__content">
-                        <div className="feature__product__grid">
+                        <div className="row">
                             {
                                 listProducts.map((product, index) => {
                                     if (index < 6) {
-                                        return <Product
-                                            key={index} product={product}
-                                            onProductDetail={(id) => onProductDetail(id)}
-                                            onAddToCart={(product) => onAddToCart(product)}
-                                        />
+                                        return <div className="col-md-4 col-sm-12 col-xs-12 mb-4">
+                                            <Product
+                                                key={index} product={product}
+                                                onProductDetail={(id) => onProductDetail(id)}
+                                                onAddToCart={(product) => onAddToCart(product)}
+                                            />
+                                        </div>
                                     }
                                 })
                             }
                         </div>
                         <div className="w-100 pt-3 text-center">
-                        <Link className="btn_fast" to="/product">Xem thêm</Link>
+                            <Link className="btn_fast" to="/product">Xem thêm</Link>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

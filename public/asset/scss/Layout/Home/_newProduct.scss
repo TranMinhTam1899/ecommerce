@@ -1,0 +1,26 @@
+.newProduct {
+    .newProductContent {
+        .newProduct__title {
+            @include text-style($color-brown-3, $fs-4, $fw-bold-0);
+            position: relative;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 70px;
+                background: $color-brown-0;
+                bottom: 0;
+                left: 46%;
+            }
+        }
+        .slick-slider{
+            .slick-list{
+                .slick-slide{
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}

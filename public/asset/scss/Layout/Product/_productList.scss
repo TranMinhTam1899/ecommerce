@@ -113,13 +113,6 @@
                 @include text-style($color-brown-3, $fs-1, $fw-normal);
             }
         }
-        .list__product__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 1.875rem;
-            grid-gap: 1.875rem;
-            gap: 1.875rem;
-        }
         // doi view
         .list_product_grid_row {
             width: 100%;

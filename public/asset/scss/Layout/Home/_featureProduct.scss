@@ -51,11 +51,6 @@
       }
     }
     padding: 20px;
-    .feature__product__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 1.875rem;
-      gap: 1.875rem;
-    }
+    
   }
 }

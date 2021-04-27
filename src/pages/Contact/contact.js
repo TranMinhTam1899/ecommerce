@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Container } from 'reactstrap';
 
-const Contact=()=> {
+const Contact = () => {
     return (
         <div>
             <section className="solid_banner_area">
-                <div className="container">
+                <Container>
                     <div className="solid_banner_inner">
                         <h3>Contact</h3>
                         <ul>
@@ -13,7 +14,7 @@ const Contact=()=> {
                             <li><Link to="/contact">&nbsp;Contact</Link></li>
                         </ul>
                     </div>
-                </div>
+                </Container>
             </section>
         </div>
     )

@@ -32,7 +32,6 @@ const Product = (props) => {
     return (
         <div className="product__item">
             <div className="product__content">
-
                 <div className="product_images">
                     <Link to={`/product/${product.id}`} onClick={() => onProductDetail(product.id)}>
                         <Img Url={product.images} Width={'100%'} />
@@ -52,7 +51,9 @@ const Product = (props) => {
                 </div>
 
                 <div className="product__info">
+                <Link to={`/product/${product.id}`} onClick={() => onProductDetail(product.id)}>
                     <p className="product-item__name">{product.name}</p>
+                    </Link>
                     <div className="product-item__rate">
                         <ul>
                             <li>

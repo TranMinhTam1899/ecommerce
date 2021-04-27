@@ -14,9 +14,15 @@
     .product__info{
         text-align: center;
         padding: 10px;
+        a{
+            &:hover{
+                text-decoration: none;
+            }
+        }
         .product-item__name{
             margin-bottom: 0;
             @include text-style($color-brown-3, $fs-3 - 2,$fw-bold-0);
+           
         }
         .product-item__rate{
             ul{
