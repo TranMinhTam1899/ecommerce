@@ -52,8 +52,8 @@
     border: none;
 }
 
-button.slick-arrow.slick-next {
-    right: -10px;
+.slick-arrow.slick-next {
+    right: 0;
     top: 40%;
     display: block;
     width: 50px;
@@ -63,7 +63,7 @@ button.slick-arrow.slick-next {
     overflow: hidden;
 }
 
-button.slick-arrow.slick-next::before {
+.slick-arrow.slick-next::before {
     content: "\f105";
     font-family: FontAweSome;
     font-size: 40px;
@@ -74,13 +74,13 @@ button.slick-arrow.slick-next::before {
     right: 15px;
 }
 
-button.slick-arrow:focus {
+.slick-arrow:focus {
     border: none;
 }
 
-button.slick-arrow.slick-prev {
+.slick-arrow.slick-prev {
     position: absolute;
-     left: -10px;
+     left: 0;
     top: 40%;
     display: block;
     width: 50px;

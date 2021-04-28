@@ -53,24 +53,3 @@
     }
   }
 }
-
-.btn_fast {
-  border: 2px solid $color-brown-3;
-  border-radius: 25px;
-  background: $color-white-0;
-  @include text-style($color-brown-3, $fs-1, $fw-bold-2 + 100);
-  padding:$spacing-0 $spacing-4;
-  text-transform: uppercase;
-  display: inline-block;
-  line-height: 25px;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-  cursor: pointer;
-  margin: 0 auto;
-  &:hover{
-      background: $color-brown-3;
-      color: $color-white-0;
-      text-decoration: none;
-  }
-}

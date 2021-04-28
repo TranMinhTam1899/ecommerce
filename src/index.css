@@ -40,8 +40,8 @@
   background: transparent;
   border: none; }
 
-button.slick-arrow.slick-next {
-  right: -10px;
+.slick-arrow.slick-next {
+  right: 0;
   top: 40%;
   display: block;
   width: 50px;
@@ -50,7 +50,7 @@ button.slick-arrow.slick-next {
   border-radius: 50%;
   overflow: hidden; }
 
-button.slick-arrow.slick-next::before {
+.slick-arrow.slick-next::before {
   content: "\f105";
   font-family: FontAweSome;
   font-size: 40px;
@@ -60,12 +60,12 @@ button.slick-arrow.slick-next::before {
   top: 5px;
   right: 15px; }
 
-button.slick-arrow:focus {
+.slick-arrow:focus {
   border: none; }
 
-button.slick-arrow.slick-prev {
+.slick-arrow.slick-prev {
   position: absolute;
-  left: -10px;
+  left: 0;
   top: 40%;
   display: block;
   width: 50px;
@@ -84,6 +84,9 @@ button.slick-arrow.slick-prev::before {
   color: #fff;
   top: 5px;
   right: 20px; }
+
+.text-uppercase {
+  text-transform: uppercase; }
 
 .Navigation .Navigation__content .nav-item .nav-link {
   color: #000 !important; }
@@ -202,6 +205,30 @@ li {
     font-size: 16px;
     letter-spacing: .25px;
     font-weight: 500; }
+
+.btn {
+  border: 2px solid #7c5743;
+  border-radius: 25px;
+  background: #fff;
+  color: #7c5743;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 25px;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+  cursor: pointer;
+  margin: 0 auto; }
+  .btn:hover {
+    background: #7c5743;
+    color: #fff;
+    text-decoration: none; }
+  .btn:focus {
+    outline: none;
+    box-shadow: none; }
 
 .header {
   padding: 10px 0;
@@ -353,86 +380,35 @@ li {
       .header__content .top__right__header .cart__number__bg {
         right: 7px !important; } }
 .home_carousel_area {
-  margin-bottom: 30px;
-  position: relative; }
-  .home_carousel_area .h_carousel_item {
+  margin-top: 15px;
+  max-height: 500px; }
+  .home_carousel_area .slick-slider .slider_item .slider_item_images {
     position: relative;
-    max-height: 600px; }
-    .home_carousel_area .h_carousel_item .carousel_hover {
+    max-height: 500px; }
+    .home_carousel_area .slick-slider .slider_item .slider_item_images .carousel_hover {
       position: absolute;
-      bottom: 20%;
-      text-align: center;
-      color: #fff;
-      line-height: 50px;
-      width: 100%;
-      margin: 0 auto; }
-      .home_carousel_area .h_carousel_item .carousel_hover h3 {
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 30px;
-        font-weight: bold; }
-      .home_carousel_area .h_carousel_item .carousel_hover .discover_btn {
-        border: 1px solid #fff;
-        padding: 10px 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #fff;
-        border-radius: 25px; }
-        .home_carousel_area .h_carousel_item .carousel_hover .discover_btn:hover {
-          border: 1px solid #ab7a5fd1;
-          transition: all .5s;
-          background-color: #ab7a5fd1; }
-  .home_carousel_area .home_carousel_slider .owl-nav button {
-    position: absolute;
-    top: 40%; }
-    .home_carousel_area .home_carousel_slider .owl-nav button span {
-      color: #ffffff6e;
-      font-size: 50px;
-      font-weight: bold; }
-  .home_carousel_area .home_carousel_slider .owl-nav .owl-prev {
-    left: 20px; }
-  .home_carousel_area .home_carousel_slider .owl-nav .owl-next {
-    right: 20px; }
-  .home_carousel_area .home_carousel_slider .owl-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    text-align: center; }
-    .home_carousel_area .home_carousel_slider .owl-dots button {
-      height: 15px;
-      width: 15px;
-      background: #fdfffc3b !important;
-      display: inline-block;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center; }
+  .home_carousel_area .slick-slider .slick-arrow.slick-prev {
+    left: 15px;
+    top: 50%; }
+  .home_carousel_area .slick-slider .slick-arrow.slick-next {
+    right: 15px;
+    top: 50%; }
+  .home_carousel_area .slick-slider .slick-dots {
+    bottom: 0; }
+    .home_carousel_area .slick-slider .slick-dots li button {
+      background: #ffffff82;
       border-radius: 50%;
-      margin: 0 3px; }
-    .home_carousel_area .home_carousel_slider .owl-dots button.active {
-      background: #fff !important; }
+      width: 12px;
+      height: 12px; }
+      .home_carousel_area .slick-slider .slick-dots li button::before {
+        display: none; }
+    .home_carousel_area .slick-slider .slick-dots li.slick-active button {
+      background: #fff; }
 
-@media screen and (max-width: 768px) {
-  .home_carousel_area .h_carousel_item {
-    margin-top: 15px; }
-    .home_carousel_area .h_carousel_item .carousel_hover {
-      left: 0;
-      top: 0;
-      line-height: 18px;
-      padding: 20px 40px; }
-      .home_carousel_area .h_carousel_item .carousel_hover h3 {
-        font-size: 20px; }
-      .home_carousel_area .h_carousel_item .carousel_hover h4, .home_carousel_area .h_carousel_item .carousel_hover h5 {
-        font-size: 18px; }
-      .home_carousel_area .h_carousel_item .carousel_hover p {
-        font-size: 16px; }
-      .home_carousel_area .h_carousel_item .carousel_hover .discover_btn {
-        font-size: 10px;
-        padding: 10px 30px; }
-  .home_carousel_area .home_carousel_slider .owl-dots {
-    bottom: 10px; }
-    .home_carousel_area .home_carousel_slider .owl-dots button {
-      height: 10px;
-      width: 10px; } }
 .feature__product__wrapper {
   background-color: #ab7a5f26; }
   .feature__product__wrapper .feature__product_header {
@@ -595,27 +571,6 @@ li {
         color: #fff;
         font-size: 18px;
         font-weight: 400; }
-
-.btn_fast {
-  border: 2px solid #7c5743;
-  border-radius: 25px;
-  background: #fff;
-  color: #7c5743;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 5px 25px;
-  text-transform: uppercase;
-  display: inline-block;
-  line-height: 25px;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-  cursor: pointer;
-  margin: 0 auto; }
-  .btn_fast:hover {
-    background: #7c5743;
-    color: #fff;
-    text-decoration: none; }
 
 .newProduct .newProductContent .newProduct__title {
   color: #7c5743;

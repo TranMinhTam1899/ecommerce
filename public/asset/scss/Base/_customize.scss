@@ -1,3 +1,8 @@
+// text-up
+.text-uppercase{
+  text-transform: uppercase;
+}
+
 .Navigation {
   .Navigation__content {
     .nav-item {
@@ -27,6 +32,7 @@ button {
   padding: 10px 27px;
   @include text-style($color-white-0, $spacing-3 - 2, $fw-normal);
 }
+
  
 button:focus{
     outline: none;
