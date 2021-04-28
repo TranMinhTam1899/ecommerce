@@ -9,7 +9,7 @@ function App() {
     if (routes && routes.length > 0) {
       return routes.map((item, index) => {
         return (
-          <TeamplateClient key={index} exact={item.exact} path={item.path} component={item.component} />
+          <TeamplateClient key={index} exact={item.exact} path={item.path} component={item.component} title={item.title} />
         )
       })
     }

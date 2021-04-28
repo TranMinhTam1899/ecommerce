@@ -79,7 +79,7 @@ const ProductList = (props) => {
             if (proudct.type === cata) {
                 resuld = cata;
             }
-        })
+        },{})
         return filterCata.length <= 0 ? proudct : proudct.type === resuld;
     })
 
@@ -113,15 +113,15 @@ const ProductList = (props) => {
 
     const showProduct = listProducts.map((product, index) => {
         return (
-            <div className={view === 1 ? 'col-md-6' : 'col-md-12 list_product_grid_row'}>
+            <div className={view === 1 ? 'col-md-6' : 'col-md-12 list_product_grid_row'} key={index}>
                 <Product
-                    key={index} product={product}
+                     product={product}
                     onProductDetail={(id) => onProductDetail(id)}
                     onAddToCart={(product) => onAddToCart(product)}
                 />
             </div>
         )
-    });
+    },{});
 
 
 

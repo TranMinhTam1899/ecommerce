@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Img from '../../component/img/img';
 import ButtonIcon from '../../component/button/buttonIcon';
 import { Link } from 'react-router-dom';
 
@@ -34,7 +33,7 @@ const Product = (props) => {
             <div className="product__content">
                 <div className="product_images">
                     <Link to={`/product/${product.id}`} onClick={() => onProductDetail(product.id)}>
-                        <Img Url={product.images} Width={'100%'} />
+                        <img src={product.images} alt=""  className="w-100" />
                     </Link>
                     <div className="products_overplay">
                         <div className="overplay__content">

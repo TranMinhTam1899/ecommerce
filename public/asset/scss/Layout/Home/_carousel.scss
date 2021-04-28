@@ -1,6 +1,6 @@
 .home_carousel_area {
-    margin-top: 15px;
-    max-height: 500px;
+  margin-top: 15px;
+  max-height: 500px;
   .slick-slider {
     .slider_item {
       .slider_item_images {
@@ -12,36 +12,44 @@
           left: 50%;
           transform: translateX(-50%);
           text-align: center;
+          .btn_carou {
+            background-color: #bb896f;
+            border: 2px solid #bb896f;
+            color: #fff;
+            &:hover{
+              background-color: #7c5743;
+              border: 2px solid #7c5743;
+            }
+          }
         }
       }
-
     }
-    .slick-arrow.slick-prev{
-        left: 15px;
-        top: 50%;
+    .slick-arrow.slick-prev {
+      left: 15px;
+      top: 50%;
     }
-    .slick-arrow.slick-next{
-        right: 15px;
-        top: 50%;
+    .slick-arrow.slick-next {
+      right: 15px;
+      top: 50%;
     }
-    .slick-dots{
-        bottom: 0;
-        li {
-            button{
-                background: #ffffff82;
-                border-radius: 50%;
-                width: 12px;
-                height: 12px;
-                &::before {
-                    display: none;
-                }
-            }
-            &.slick-active{
-                button{
-                    background: #fff;
-                }
-            }
+    .slick-dots {
+      bottom: 0;
+      li {
+        button {
+          background: #ffffff82;
+          border-radius: 50%;
+          width: 12px;
+          height: 12px;
+          &::before {
+            display: none;
+          }
         }
+        &.slick-active {
+          button {
+            background: #fff;
+          }
+        }
+      }
     }
   }
 }

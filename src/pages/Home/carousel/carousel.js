@@ -25,7 +25,7 @@ const Carousel = () => {
                         <div className="carousel_hover">
                             <h3 className="text-white text-uppercase">mens bag</h3>
                             <h4 className="text-white">We feature the best professional bags </h4>
-                            <Link className="btn" to="#">discover now</Link>
+                            <Link className="btn btn_carou" to="#">discover now</Link>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Carousel = () => {
                         <div className="carousel_hover">
                             <h3 className="text-white text-uppercase">mens bag</h3>
                             <h4 className="text-white">We feature the best professional bags </h4>
-                            <Link className="btn" to="#">discover now</Link>
+                            <Link className="btn btn_carou" to="#">discover now</Link>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const Carousel = () => {
                         <div className="carousel_hover">
                             <h3 className="text-white text-uppercase">mens bag</h3>
                             <h4 className="text-white">We feature the best professional bags </h4>
-                            <Link className="btn" to="#">discover now</Link>
+                            <Link className="btn btn_carou" to="#">discover now</Link>
                         </div>
                     </div>
                 </div>

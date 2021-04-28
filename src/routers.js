@@ -14,57 +14,66 @@ const routesClient =[
     {
         path: "/",
         exact: true,
-        component:Home
-
+        component:Home,
+        title: "Home",
     },
     {
         path: "/login",
         exact: true,
-        component:Login
+        component:Login,
+        title: "Login"
 
     },
     {
         path: "/rigister",
         exact: true,
-        component:Rigister
+        component:Rigister,
+        title: "Rigister"
 
     },
     {
         path: "/profile",
         exact: true,
-        component: Profile
+        component: Profile,
+        title: "Profile"
 
     },
     {
         path: "/contact",
         exact: true,
-        component:Contact
+        component:Contact,
+        title: "Contact"
 
     },
     {
         path: "/cart",
         exact: true,
-        component:Cart
+        component:Cart,
+        title: "Cart"
     },
     {
         path: "/empty-cart",
         exact: true,
-        component:EmptyCart
+        component:EmptyCart,
+        title: "EmptyCart"
     },
     {
         path: "/product",
         exact: true,
-        component:ProductList
+        component:ProductList,
+        title: "Product"
     },
     {
         path: "/product/:id",
         exact: true,
-        component:ProductDetail
+        component:ProductDetail,
+        title: "Product-detail"
     },
     {
         path: "/*",
         exact: true,
-        component:NotFoundPages
+        component:NotFoundPages,
+        title: "404"
     },
 
 ];
